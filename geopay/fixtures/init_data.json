@@ -87,5 +87,18 @@
         "name": "Knowledge",
         "price": "15000.00"
     }
+},
+{
+    "model": "geopay.merchant",
+    "pk": 1,
+    "fields": {
+        "merchant_id": "1",
+        "longitude": "1.00000",
+        "latitude": "1.00000",
+        "products": [
+            1,
+            2
+        ]
+    }
 }
 ]

@@ -8,6 +8,8 @@ from django.views.generic import TemplateView
 
 from .models import Customer, Merchant
 
+from django.forms.models import model_to_dict
+
 API_KEY = '5099880dfe81d420392f11747e919624'
 
 class HomeView(TemplateView):
@@ -31,3 +33,11 @@ class TransactionHandler(View):
         response = requests.post(url, json=payload)
         json_data = json.loads(response.text)
         return JsonResponse(json_data)
+
+class ProductHandler(View):
+    def get(self, request, longitude, latitude):
+        merchant = Merchant.objects.get(longitude=longitude, latitude=latitude)
+        json_data = {'products': []}
+        for product in merchant.products.all():
+            json_data['products'].append({product.name: float(product.price)})
+        return JsonResponse(json.dumps(json_data, ensure_ascii=False), safe=False)
