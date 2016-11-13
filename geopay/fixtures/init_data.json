@@ -1,0 +1,11 @@
+[
+{
+  "model": "geopay.customer",
+  "pk": 1,
+  "fields": {
+    "cust_id": "5827cbaf360f81f10454a44e",
+    "first_name": "Steve",
+    "last_name": "J."
+  }
+}
+]
