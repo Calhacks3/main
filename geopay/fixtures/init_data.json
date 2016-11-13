@@ -1,11 +1,91 @@
 [
 {
-  "model": "geopay.customer",
-  "pk": 1,
-  "fields": {
-    "cust_id": "5827cbaf360f81f10454a44e",
-    "first_name": "Steve",
-    "last_name": "J."
-  }
+    "model": "geopay.customer",
+    "pk": 1,
+    "fields": {
+        "cust_id": "5827cbaf360f81f10454a44e",
+        "first_name": "Steve",
+        "last_name": "J."
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 1,
+    "fields": {
+        "name": "Fence",
+        "price": "700000.00"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 2,
+    "fields": {
+        "name": "Coffee",
+        "price": "5.00"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 3,
+    "fields": {
+        "name": "Acorns",
+        "price": "10.00"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 4,
+    "fields": {
+        "name": "Boba",
+        "price": "4.00"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 5,
+    "fields": {
+        "name": "Juice",
+        "price": "3.99"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 6,
+    "fields": {
+        "name": "Electron",
+        "price": "1248.16"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 7,
+    "fields": {
+        "name": "Ur",
+        "price": "92.00"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 8,
+    "fields": {
+        "name": "Sandwich",
+        "price": "7.99"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 9,
+    "fields": {
+        "name": "Sleep",
+        "price": "0.00"
+    }
+},
+{
+    "model": "geopay.products",
+    "pk": 10,
+    "fields": {
+        "name": "Knowledge",
+        "price": "15000.00"
+    }
 }
 ]
