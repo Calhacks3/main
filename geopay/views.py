@@ -22,17 +22,26 @@ class HomeView(TemplateView):
 
 
 class TransactionHandler(View):
-    def get(self, request, longitude, latitude, amount):
+    def get(self, request, longitude, latitude, amount, description=None):
+        """Description is a dictionary"""
         customer = Customer.objects.get(pk=1)
         merchant = Merchant.objects.get(longitude=longitude, latitude=latitude)
         payload = {
             'merchant_id': merchant.merchant_id, 'medium': 'balance',
             'amount': amount
         }
+        if description:
+            sentence = ''
+            for k, v in description:
+                if v:
+                    sentence += '{0},'.format(k)
+            payload['description'] = description
+
         url = 'http://api.reimaginebanking.com/accounts/{0}/purchases?key={1}'.format(customer.cust_id, API_KEY)
         response = requests.post(url, json=payload)
         json_data = json.loads(response.text)
         return JsonResponse(json_data)
+
 
 class ProductHandler(View):
     def get(self, request, longitude, latitude):
